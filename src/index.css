@@ -1,0 +1,60 @@
+/**
+ * index.css — Global Styles
+ * ==========================
+ * Minimal global reset + font import.
+ * Component-specific styles live in inline styles within each .tsx file
+ * to keep everything co-located and easy to find.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap');
+
+/* Box-sizing reset: padding and border are included in element width/height */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0f0c29;
+  color: #f1f5f9;
+  -webkit-font-smoothing: antialiased; /* Smoother text on macOS */
+  overflow-x: hidden; /* Prevent horizontal scroll from animated orbs */
+}
+
+/* Custom scrollbar for WebKit browsers */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(99,102,241,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(99,102,241,0.5); }
+
+/* Range input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(99,102,241,0.5);
+  transition: box-shadow 0.2s;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 16px rgba(99,102,241,0.8);
+}
+
+/* Number inputs */
+input[type="number"]:focus {
+  border-color: rgba(99,102,241,0.6) !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+input[type="number"]::-webkit-inner-spin-button { opacity: 0.5; }
