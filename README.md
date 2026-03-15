@@ -372,3 +372,4 @@ processAll() → for each pending image:
 - **Quality 85** is the sweet spot for JPEG — visually lossless but much smaller than 95+
 - **PNG → WEBP** is a great conversion for web images with transparency
 - Max 50 MB per file
+- Use **Venv** for better testing experience
